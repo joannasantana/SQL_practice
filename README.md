@@ -12,3 +12,13 @@ Intermediate SQL:
     - querying using JOIN, UNION, CASE, HAVING, PARTITION BY
     - Updating/Deleting Data: INSERT INTO, UPDATE, DELETE FROM
     - Aliasing: AS
+
+Advanced SQL:
+    
+    Skills Practiced:
+    - Common Table Expressions (CTEs - WITH queries)
+    - Temp Tables
+    - String functions: TRIM, LTRIM, RTRIM, Replace, Substring, Upper, Lower
+    - Creating Stored Procedures and modifying them to include @variables
+    - Subqueries in the SELECT, FROM, and WHERE statements
+

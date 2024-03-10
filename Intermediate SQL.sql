@@ -269,7 +269,7 @@ SELECT FirstName + ' ' + LastName AS FullName
 FROM EmployeeDemographics
 
 --Query 27
-SELECT AVG(Age) AS AvgAve
+SELECT AVG(Age) AS AvgAge
 FROM EmployeeDemographics
 
 --Query 28
@@ -297,7 +297,7 @@ FROM EmployeeSalary
 
 --Query 31
 SELECT FirstName, LastName, Gender, Salary,
-COUNT(GENDER) OVER (PARTITION BY Gender) as TotalGender
+COUNT(GENDER) OVER (PARTITION BY Gender) as TotalGender --keeps all rows and adds on a new column
 FROM EmployeeDemographics AS dem
 JOIN EmployeeSalary AS sal
 	ON dem.EmployeeID = sal.EmployeeID
@@ -307,4 +307,4 @@ SELECT Gender, COUNT(Gender)
 FROM EmployeeDemographics AS dem
 JOIN EmployeeSalary AS sal
 	ON dem.EmployeeID = sal.EmployeeID
-GROUP BY Gender
+GROUP BY Gender --reduces to one row for each gender and gets rid of all other columns
